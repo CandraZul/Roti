@@ -34,10 +34,15 @@ public class RotiTawar extends Roti implements hargaBahan{
         if (varian < 1 || varian > 3){
             System.out.println("varian tidak ada");
             System.exit(esBatu);
+        } else {
+        this.varian = varian;
         }
     }
     double biayaVarian(){
-    
+        switch (this.varian) {
+            case 1 :
+             
+    }
     }
     
     double biaya(){
