@@ -8,7 +8,7 @@ package roti;
  *
  * @author candr
  */
-public class Roti {
+public abstract class Roti {
     int tepungTerigu;
     int gulaPasir;
     int butter;
@@ -18,28 +18,16 @@ public class Roti {
     int telur;
     int esBatu;
     int varian;
-    private int jmlPesanan;
+    int totalBerat;
+    int jmlPesanan;
+    int beratPerPcs;
     
-    
-    int beratAdonan(){
-        return this.butter + this.esBatu + this.gulaPasir + this.ragi + this.susuBubuk + this.susuCair + this.telur + this.tepungTerigu;
+    abstract double biayaPerDough();
+    double biayaPerPcs(){
+        return this.biayaPerDough()/this.beratPerPcs + this.biayaVarian();
     }
-    
-    public void setJmlPesanan(int x){
-        if (x < 0) {
-            System.out.println("Jumlah pesanan tidak valid");
-            System.exit(0);
-        } else {
-            jmlPesanan = x;
-        }
+    abstract double biayaVarian();
+    double hargaPerPcs(){
+        return this.biayaPerPcs() + this.biayaPerPcs()*40./100 ;
     }
-    
-    public int getJmlPesanan(){
-        return this.jmlPesanan;
-    }
-    
-    
-    
-    
-    
 }
