@@ -35,6 +35,7 @@ public class RotiManis extends Roti implements hargaBahan{
             this.varian = varian;
         }
     }
+    @Override
     double biayaVarian(){
         return switch (this.varian) {
             case 1 -> hargaBahan.KEJU*5 + hargaBahan.COKLAT*10;
@@ -43,10 +44,7 @@ public class RotiManis extends Roti implements hargaBahan{
         };
     }
     
-    double biayaPerPcs(){
-        return hargaBahan.GULA_PASIR * this.gulaPasir;
-    }
-    
+    @Override
     double biayaPerDough(){
         return hargaBahan.TEPUNG_TERIGU * this.tepungTerigu + hargaBahan.GULA_PASIR*this.gulaPasir + hargaBahan.BUTTER*this.butter + hargaBahan.RAGI*this.ragi + hargaBahan.SUSU_BUBUK*this.susuBubuk + hargaBahan.SUSU_CAIR*this.susuCair + hargaBahan.TELUR*this.telur + hargaBahan.ES_BATU*this.esBatu;
     }
