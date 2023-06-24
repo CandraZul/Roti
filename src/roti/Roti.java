@@ -24,7 +24,7 @@ public abstract class Roti {
     
     abstract double biayaPerDough();
     double biayaPerPcs(){
-        return this.biayaPerDough()/this.beratPerPcs + this.biayaVarian();
+        return this.biayaPerDough()/(this.totalBerat/this.beratPerPcs) + this.biayaVarian();
     }
     abstract double biayaVarian();
     double hargaPerPcs(){
