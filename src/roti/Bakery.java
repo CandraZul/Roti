@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Bakery{    
     public static void main(String[] args) {
-        RotiManis r1 = new RotiManis(1, 3);
+        RotiManis r1 = new RotiManis(1, 1);
         System.out.println("harga adalah "+r1.hargaPerPcs());
         System.out.println("harga tanpa varian" + r1.biayaKosongan());
         System.out.println("biaya varian" + r1.biayaVarian());
