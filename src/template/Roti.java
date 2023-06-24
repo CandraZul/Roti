@@ -27,7 +27,7 @@ public abstract class Roti implements hargaBahan{
         return hargaBahan.TEPUNG_TERIGU * this.tepungTerigu + hargaBahan.GULA_PASIR*this.gulaPasir + hargaBahan.BUTTER*this.butter + hargaBahan.RAGI*this.ragi + hargaBahan.SUSU_BUBUK*this.susuBubuk + hargaBahan.SUSU_CAIR*this.susuCair + hargaBahan.TELUR*this.telur + hargaBahan.ES_BATU*this.esBatu;
     }
     public double biayaPerPcs(){
-        return this.biayaPerDough()/(this.totalBerat/this.beratPerPcs) + this.biayaVarian();
+        return this.biayaPerDough()/this.totalBerat*this.beratPerPcs + this.biayaVarian();
     }
     protected double biayaVarian(){
         return this.varian;
