@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package roti;
+import template.Roti;
 import interfaces.*;
+
 /**
  *
  * @author candr
@@ -36,7 +38,7 @@ public class RotiManis extends Roti implements hargaBahan{
         }
     }
     @Override
-    double biayaVarian(){
+    protected double biayaVarian(){
         return switch (this.varian) {
             case 1 -> hargaBahan.KEJU*5 + hargaBahan.COKLAT*10;
             case 2 -> hargaBahan.SELAI_RB*10 + hargaBahan.KRIM_V*5;
@@ -46,10 +48,5 @@ public class RotiManis extends Roti implements hargaBahan{
     
     double biayaKosongan(){
         return this.biayaPerDough()/(this.totalBerat/this.beratPerPcs);
-    }
-    
-    @Override
-    double biayaPerDough(){
-        return hargaBahan.TEPUNG_TERIGU * this.tepungTerigu + hargaBahan.GULA_PASIR*this.gulaPasir + hargaBahan.BUTTER*this.butter + hargaBahan.RAGI*this.ragi + hargaBahan.SUSU_BUBUK*this.susuBubuk + hargaBahan.SUSU_CAIR*this.susuCair + hargaBahan.TELUR*this.telur + hargaBahan.ES_BATU*this.esBatu;
     }
 }
