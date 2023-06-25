@@ -35,4 +35,18 @@ public abstract class Roti implements hargaBahan{
     public double  hargaPerPcs(){
         return this.biayaPerPcs() + this.biayaPerPcs()*40./100 ;
     }
+    
+    protected double kebutuhanTepung(){
+        return (this.tepungTerigu/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    protected double kebutuhanGula(){
+        return (this.gulaPasir/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    public void printBahan(){
+        System.out.println("Tepung : "+this.kebutuhanTepung());
+        System.out.println("Gula : "+this.kebutuhanGula());
+    }
 }
+    
