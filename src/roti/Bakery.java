@@ -21,6 +21,7 @@ public class Bakery{
         System.out.println("Harga Pizza /pcs : "+p1.hargaPerPcs());
         System.out.println("Harga Pizza tanpa topping : "+p1.biayaRotitanpatopping());
         System.out.println("Harga topping : "+p1.biayaVarian());
+        System.out.println("Banyak roti per adonan: " + p1.banyakRotiperAdonan());
         p1.printBahan();
     }
 }
