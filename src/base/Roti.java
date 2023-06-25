@@ -44,9 +44,43 @@ public abstract class Roti implements hargaBahan{
         return (this.gulaPasir/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
     }
     
+    protected double kebutuhanButter(){
+        return (this.butter/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    protected double kebutuhanRagi(){
+        return (this.ragi/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    protected double kebutuhanSusuBubuk(){
+        return (this.susuBubuk/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    protected double kebutuhanSusuCair(){
+        return (this.susuCair/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    protected double kebutuhanTelur(){
+        return (this.telur/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    protected double kebutuhanEsBatu(){
+        return (this.esBatu/(this.totalBerat / this.beratPerPcs))*this.jmlPesanan;
+    }
+    
+    
+    
     public void printBahan(){
-        System.out.println("Tepung : "+this.kebutuhanTepung());
-        System.out.println("Gula : "+this.kebutuhanGula());
+        System.out.println("========== B A H A N =========");
+        System.out.println("Tepung : "+this.kebutuhanTepung()+" gr");
+        System.out.println("Gula : "+this.kebutuhanGula()+" gr");
+        System.out.println("Butter : "+this.kebutuhanButter()+" gr");
+        System.out.println("Ragi : "+this.kebutuhanRagi()+" gr");
+        System.out.println("Susu bubuk : "+this.kebutuhanSusuBubuk()+" gr");
+        System.out.println("Susu Cair : "+this.kebutuhanSusuCair()+" gr");
+        System.out.println("Telur : "+this.kebutuhanTelur()+" gr");
+        System.out.println("Es Batu : "+this.kebutuhanEsBatu()+" gr");
+        System.out.println("===============================");
     }
 }
     

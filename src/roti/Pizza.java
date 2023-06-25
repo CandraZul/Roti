@@ -43,17 +43,7 @@ public class Pizza extends Roti implements hargaBahan{
         return this.biayaPerDough()/(this.totalBerat/this.beratPerPcs);
     }
     
-    protected double banyakRotiperAdonan(){
-        return this.totalBerat / this.beratPerPcs;
-    }
     
-    protected double kebutuhanTepungg(){
-        return (this.tepungTerigu/this.banyakRotiperAdonan())*this.jmlPesanan;
-    }
     
-    public void printBahann(){
-        System.out.println("=========Bahan Pizza==============");
-        System.out.println("Tepung Terigu : " + this.kebutuhanTepungg());
-        System.out.println("Gula Pasir : " + (this.gulaPasir/this.banyakRotiperAdonan())*this.jmlPesanan);
-    }
+    
 }
